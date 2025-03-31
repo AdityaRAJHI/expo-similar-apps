@@ -22,9 +22,9 @@ const Navigation = () => {
       </Link>
       
       <div className="relative -top-5">
-        <button className="h-14 w-14 rounded-full bg-crypto-blue text-white flex items-center justify-center shadow-lg">
+        <Link to="/dashboard" className="h-14 w-14 rounded-full bg-crypto-blue text-white flex items-center justify-center shadow-lg">
           <Plus size={26} />
-        </button>
+        </Link>
       </div>
       
       <Link to="/notifications" className={`flex flex-col items-center ${isActive('/notifications') ? 'text-crypto-blue' : 'text-gray-400'}`}>

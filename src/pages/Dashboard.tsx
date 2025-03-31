@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import MobileLayout from '@/components/MobileLayout';
 import StatusBar from '@/components/StatusBar';
 import PortfolioCard from '@/components/PortfolioCard';
 import CryptoItem from '@/components/CryptoItem';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from 'react-router-dom';
 
 const mockCryptos = [
   {
@@ -53,6 +55,8 @@ const mockCryptos = [
 ];
 
 const Dashboard = () => {
+  const [profileImage, setProfileImage] = useState("https://randomuser.me/api/portraits/women/42.jpg");
+
   return (
     <MobileLayout>
       <div className="p-4">
@@ -64,13 +68,12 @@ const Dashboard = () => {
             <p className="text-sm text-gray-500">Welcome Back 👋</p>
           </div>
           
-          <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-crypto-blue">
-            <img 
-              src="https://randomuser.me/api/portraits/women/42.jpg" 
-              alt="User avatar" 
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <Link to="/settings">
+            <Avatar className="h-12 w-12 border-2 border-crypto-blue">
+              <AvatarImage src={profileImage} alt="User avatar" />
+              <AvatarFallback>NJ</AvatarFallback>
+            </Avatar>
+          </Link>
         </div>
         
         <PortfolioCard 
@@ -84,7 +87,7 @@ const Dashboard = () => {
         <div className="mt-6">
           <div className="flex justify-between items-center mb-2">
             <h2 className="font-bold text-lg">My Portfolio</h2>
-            <button className="text-crypto-blue text-sm">View all</button>
+            <Link to="/market" className="text-crypto-blue text-sm">View all</Link>
           </div>
           
           <div className="space-y-2">

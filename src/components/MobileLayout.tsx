@@ -15,7 +15,7 @@ const MobileLayout: React.FC<MobileLayoutProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className={`mobile-container bg-white ${className}`}>
+      <div className={`mobile-container max-w-[480px] mx-auto min-h-screen bg-white ${className}`}>
         {children}
         
         {showNavigation && <Navigation />}

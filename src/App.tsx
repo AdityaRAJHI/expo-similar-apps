@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import Onboarding from "./pages/Onboarding";
 import Dashboard from "./pages/Dashboard";
 import CryptoDetail from "./pages/CryptoDetail";
+import Market from "./pages/Market";
+import Notifications from "./pages/Notifications";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +25,9 @@ const App = () => (
           <Route path="/" element={<Onboarding />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/crypto/:id" element={<CryptoDetail />} />
+          <Route path="/market" element={<Market />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/settings" element={<Settings />} />
           <Route path="/old" element={<Index />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
