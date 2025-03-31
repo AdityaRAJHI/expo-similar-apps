@@ -6,7 +6,7 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use my stack**
 
 Simply visit and start prompting.
 
@@ -62,7 +62,7 @@ This project is built with .
 
 Simply open and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes it is!
 
